@@ -27,14 +27,15 @@ function startCountdown() {
 // ITERATION 3: Show Toast
 function showToast(message) {
   console.log("showToast called!");
+  const toastMessage = document.getElementById('toast-message');
+  toastMessage.innerText = message; // Update the toast message
+  
   const toastElement = document.getElementById('toast');
   toastElement.classList.add('show'); // Show the toast card
-
+  
   setTimeout(function() {
     toastElement.classList.remove('show'); // Hide the toast card after 3 seconds
   }, 3000);
-  
-  document.getElementById('toast-message').innerText = message; // Set the toast message
 }
 
 // BONUS: ITERATION 4: TOAST CLOSE BUTTON
